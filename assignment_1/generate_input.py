@@ -1,6 +1,9 @@
 # Prepare input
 import random
-inputFile = open('input.txt', 'w')
+import sys
+
+print(sys.getrecursionlimit())
+inputFile = open('./input.txt', 'w')
 
 number_of_mapped_instances = int(input("Enter the number of mapped instances:\n"))
 
@@ -8,7 +11,7 @@ number_of_mapped_instances = int(input("Enter the number of mapped instances:\n"
 random.seed(5)
 
 for i in range(number_of_mapped_instances):
-    number_of_computation_steps = random.randint(number_of_mapped_instances/2, number_of_mapped_instances)
+    number_of_computation_steps = random.randint(int(number_of_mapped_instances/2), number_of_mapped_instances)
     x0 = random.randint(1, 9)
     if i <= number_of_mapped_instances-1:
         inputFile.write(f"{number_of_computation_steps}, {x0}\n")
