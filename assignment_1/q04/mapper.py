@@ -14,8 +14,10 @@ for line in inputFile:
   numbers.append(int(line))
 
 max_number = max(numbers)
-numbers.remove(1)
-numbers.remove(0)
+if 1 in numbers:
+  numbers.remove(1)
+if 0 in numbers:
+  numbers.remove(0)
 
 isPrime = True
 for i in range(2, max_number+1):
