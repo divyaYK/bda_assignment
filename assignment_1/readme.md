@@ -1,12 +1,8 @@
 #### Assignment question allotted: Q.5
 
 Steps to run:
-```bash
-pip install mrjob       # if package mrjob isn't installed
-python generate_input.py
-```
-Enter the number of mapped instances when prompted.
 
+Locally:
 ```bash
-python job.py input.txt
+python mapper.py <Number_of_computation_steps> | python sort.py | python reducer.py
 ```
