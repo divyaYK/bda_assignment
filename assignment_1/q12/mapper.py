@@ -2,15 +2,13 @@
 
 from __future__ import print_function
 import sys
-
-inputFile = open(sys.argv[1], 'r')
-
+import math
 
 prime_numbers = []
 numbers = []
 numbers_to_send = []
 
-for line in inputFile:
+for line in sys.stdin:
   numbers.append(int(line))
 
 max_number = max(numbers)
@@ -21,7 +19,7 @@ if 0 in numbers:
 
 isPrime = True
 for i in range(2, max_number+1):
-    for j in range(2, i):
+    for j in range(2, int(math.sqrt(i)) + 1):
       if i%j==0:
         isPrime = False
     if isPrime:
@@ -46,5 +44,3 @@ for number in numbers:
 
 for number in numbers_to_send:
   print(number)
-
-inputFile.close()

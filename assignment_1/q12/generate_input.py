@@ -2,6 +2,7 @@ import random
 import sys
 
 number_of_input_entries = int(sys.argv[1])
+random.seed(15)
 
 inputFile = open('input.txt', 'w')
 
