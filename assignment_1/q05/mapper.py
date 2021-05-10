@@ -1,25 +1,19 @@
 """mapper.py"""
 
-from __future__ import print_function
-from __future__ import division
+from __future__ import print_function, division
 import sys
 import random
 
-def recursive_calculation(x0, n):
-    base = x0
-    if n == 0:
-        return base
-    else:
-        xn_prev = recursive_calculation(x0, n-1)
-        return 1+(1/xn_prev)
+random.seed(15)
 
-if __name__ == "__main__":
-  
-  number_of_computation_steps = sys.argv[1]
-  x0 = random.randint(1, 10)
-  number_of_computation_steps = float(number_of_computation_steps)
-  x0 = float(x0)
+number_of_computation_steps = sys.argv[1]
+x0 = random.randint(1, 10)
+number_of_computation_steps = int(number_of_computation_steps)
+x0 = float(x0)
 
-  ratio = recursive_calculation(x0, number_of_computation_steps)
-  print(x0, ratio)
+ratios = [x0]
+for i in range(1, number_of_computation_steps+1):
+    ratio = 1 + (1/ratios[i-1])
+    ratios.append(ratio)
+    print("0", ratio)
 
