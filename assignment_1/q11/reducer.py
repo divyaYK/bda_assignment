@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 """reducer.py"""
 
 from __future__ import print_function, division
