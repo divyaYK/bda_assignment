@@ -16,9 +16,11 @@ def compute_term(n):
 
 multiplication_terms = int(sys.argv[1])
 recursion_limit = sys.getrecursionlimit()
+denominator = 1
 
 for ith_term in range(1, multiplication_terms):
   if ith_term >= recursion_limit:
     sys.setrecursionlimit(2 * ith_term)
-  print(compute_term(ith_term)/2)
+  denominator = compute_term(ith_term)/2
 
+print(denominator)
