@@ -4,6 +4,8 @@ from __future__ import print_function, division
 import sys
 import random
 
+random.seed(15)
+
 total_doors = 3
 total_tries = int(sys.argv[1])
 success = 0
@@ -32,4 +34,4 @@ for trial in range(0, total_tries):
   else:
     success += 1
 
-print(100 * success/total_tries)
+print(100 * success/(total_doors * total_tries))
