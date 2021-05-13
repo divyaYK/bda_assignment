@@ -14,5 +14,20 @@ recursively computed as<br>
 
 Locally:
 ```bash
-python mapper.py <Number_of_computation_steps> | python sort.py | python reducer.py
+$ python mapper.py <Number_of_computation_steps> | python sort.py | python reducer.py
+```
+<br>
+HDFS:
+```bash
+$ cd /path/to/directory/where/python/files/exist
+$ hadoop jar /usr/hdp/current/hadoop-mapreduce-client/hadoop-streaming.jar \
+  -D mapreduce.jobs.maps=2 \
+  -file ./mapper.py \
+  -mapper "python ./mapper.py 500" \
+  -file ./reducer.py \
+  -reducer ./reducer.py \
+  -input /path/to/hdfs/directory/input/ \
+  -output /path/to/hdfs/directory/final_output
+# To view output
+$ hdfs dfs -cat /path/to/hdfs/directory/final_output/part-00000
 ```
