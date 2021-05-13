@@ -11,9 +11,9 @@ x0 = random.randint(1, 10)
 number_of_computation_steps = int(number_of_computation_steps)
 x0 = float(x0)
 
-ratios = [x0]
+ratio = x0
 for i in range(1, number_of_computation_steps+1):
-    ratio = 1 + (1/ratios[i-1])
-    ratios.append(ratio)
-    print("0", ratio)
+    ratio = 1 + (1/ratio)
+
+print(ratio)
 
