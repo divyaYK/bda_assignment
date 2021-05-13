@@ -132,3 +132,6 @@ dmypy.json
 .vscode
 
 blah.txt
+
+./assignment_1/submssion/*
+./assignment_1/submssion
