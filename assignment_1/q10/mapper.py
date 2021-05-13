@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 from __future__ import print_function, division
 import random
 import sys
@@ -7,6 +9,9 @@ random.seed(15)
 n = int(sys.argv[1])
 m = int(sys.argv[2])
 number_of_experiment_tries = int(sys.argv[3])
+fn = 1
+fn_prev = 1
+golden_ratio = 0
 
 def computeFibonacciTerms(f0, f1, n):
   if n>=sys.getrecursionlimit():
@@ -30,8 +35,6 @@ for _ in range(number_of_experiment_tries):
   f1 = random.randint(0, m)
 
   fn_prev, fn = computeFibonacciTerms(f0, f1, n)
-  
-  try:
-    print(fn/fn_prev)
-  except ZeroDivisionError():
-    continue
+  golden_ratio += (fn/fn_prev)
+
+print(golden_ratio/number_of_experiment_tries)

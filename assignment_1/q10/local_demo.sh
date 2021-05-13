@@ -1,3 +1,2 @@
-python mapper.py 25 200 500 > mapperOutput.txt
-cat mapperOutput | sort -n > sortOutput.txt
-cat sortOutput.txt | python reducer.py > reducerOutput.txt
+# python mapper.py <n: fibonacci length> <m: max value> <experiment tries> | sort -n | python reducer.py
+python mapper.py 25 200 500 | sort -n | python reducer.py
