@@ -133,5 +133,6 @@ dmypy.json
 
 blah.txt
 
-./assignment_1/submssion/*
-./assignment_1/submssion
+assignment_1/submission/*
+assignment_1/submission/q*
+assignment_1/submission
