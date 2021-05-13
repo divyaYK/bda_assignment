@@ -21,6 +21,6 @@ denominator = 1
 for ith_term in range(1, multiplication_terms):
   if ith_term >= recursion_limit:
     sys.setrecursionlimit(2 * ith_term)
-  denominator = compute_term(ith_term)/2
+  denominator *= compute_term(ith_term)/2
 
 print(denominator)
