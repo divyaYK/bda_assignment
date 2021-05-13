@@ -10,8 +10,7 @@ numRatios = 0
 for line in sys.stdin:
 
     if line != "":
-        input_list = line.split()
-        ratio = float(input_list[1])
+        ratio = float(line)
         if ratio!=0:
             total += ratio
             numRatios += 1
