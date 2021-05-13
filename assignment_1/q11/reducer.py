@@ -11,9 +11,6 @@ min_list = []
 
 # input comes from STDIN
 for line in sys.stdin:
-    # remove leading and trailing whitespace
-    line = line.strip()
-
     if line!="":
       number, occurrence = line.split()
       number = int(number)
