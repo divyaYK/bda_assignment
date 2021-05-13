@@ -1,6 +1,5 @@
 from __future__ import print_function, division
 import sys
-import math
 
 numerator = 2
 denominator = 1
