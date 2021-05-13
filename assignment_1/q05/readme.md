@@ -20,7 +20,7 @@ $ python mapper.py <Number_of_computation_steps> | python sort.py | python reduc
 HDFS:
 ```bash
 $ cd /path/to/directory/where/python/files/exist
-$ hadoop jar /usr/hdp/current/hadoop-mapreduce-client/hadoop-streaming.jar \
+$ hadoop jar /path/to/jar/file/hadoop-streaming.jar \
   -D mapreduce.jobs.maps=2 \
   -file ./mapper.py \
   -mapper "python ./mapper.py 500" \
