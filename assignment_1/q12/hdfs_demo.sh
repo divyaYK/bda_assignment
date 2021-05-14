@@ -1,6 +1,6 @@
 mkdir input
 cd input
-for (( n=1 ; n<=10; i++))
+for n in 1 2 3 4 5 6 7 8 9 10
 do
     python "../generate_input.py" 200000 2000000 "input_$n.txt"
 done
