@@ -2,7 +2,7 @@ mkdir input
 cd input
 for n in 1 2 3 4 5 6 7 8 9 10
 do
-    python "../generate_input.py" 200000 2000000 input_$a.txt
+    python "../generate_input.py" 200000 2000000 input_`$a`.txt
 done
 cd ..
 hdfs dfs -mkdir assign1/q12
