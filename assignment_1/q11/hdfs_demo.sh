@@ -1,6 +1,9 @@
 mkdir input
 cd input
-touch input_1.txt input_2.txt input_3.txt input_4.txt input_5.txt input_6.txt
+for n in 1 2 3 4 5 6 7 8 9 10
+do
+    python "../generate_input.py" 200000 2000000 input_$a.txt
+done
 cd ..
 hdfs dfs -mkdir assign1/q11
 hdfs dfs -mkdir assign1/q11/input
