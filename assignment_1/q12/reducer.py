@@ -7,9 +7,6 @@ prime_numbers = []
 
 # input comes from STDIN
 for line in sys.stdin:
-    # remove leading and trailing whitespace
-    line = line.strip()
-
     if line!="":
       prime_number = int(line)
       prime_numbers.append(prime_number)
