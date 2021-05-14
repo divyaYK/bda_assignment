@@ -1,0 +1,83 @@
+[maria_dev@sandbox-hdp q02]$ hadoop jar /usr/hdp/current/hadoop-mapreduce-client/hadoop-streaming.jar -D mapreduce.jobs.maps=2 -file .
+/mapper.py -mapper "python ./mapper.py 10000" -file ./reducer.py -reducer ./reducer.py -input /user/maria_dev/assign1/q02/input/ -outp
+ut /user/maria_dev/assign1/q02/final_output
+21/05/13 21:15:26 WARN streaming.StreamJob: -file option is deprecated, please use generic option -files instead.
+packageJobJar: [./mapper.py, ./reducer.py] [/usr/hdp/2.6.5.0-292/hadoop-mapreduce/hadoop-streaming-2.7.3.2.6.5.0-292.jar] /tmp/streamj
+ob3545458344158698577.jar tmpDir=null
+21/05/13 21:15:27 INFO client.RMProxy: Connecting to ResourceManager at sandbox-hdp.hortonworks.com/172.18.0.2:8032
+21/05/13 21:15:27 INFO client.AHSProxy: Connecting to Application History server at sandbox-hdp.hortonworks.com/172.18.0.2:10200
+21/05/13 21:15:27 INFO client.RMProxy: Connecting to ResourceManager at sandbox-hdp.hortonworks.com/172.18.0.2:8032
+21/05/13 21:15:27 INFO client.AHSProxy: Connecting to Application History server at sandbox-hdp.hortonworks.com/172.18.0.2:10200
+21/05/13 21:15:27 INFO mapred.FileInputFormat: Total input paths to process : 4
+21/05/13 21:15:28 INFO mapreduce.JobSubmitter: number of splits:4
+21/05/13 21:15:29 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1620904910871_0019
+21/05/13 21:15:29 INFO impl.YarnClientImpl: Submitted application application_1620904910871_0019
+21/05/13 21:15:29 INFO mapreduce.Job: The url to track the job: http://sandbox-hdp.hortonworks.com:8088/proxy/application_162090491087
+1_0019/
+21/05/13 21:15:29 INFO mapreduce.Job: Running job: job_1620904910871_0019
+21/05/13 21:15:34 INFO mapreduce.Job: Job job_1620904910871_0019 running in uber mode : false
+21/05/13 21:15:34 INFO mapreduce.Job:  map 0% reduce 0%
+21/05/13 21:16:57 INFO mapreduce.Job:  map 25% reduce 0%
+21/05/13 21:16:58 INFO mapreduce.Job:  map 75% reduce 0%
+21/05/13 21:17:02 INFO mapreduce.Job:  map 100% reduce 0%
+21/05/13 21:17:03 INFO mapreduce.Job:  map 100% reduce 100%
+21/05/13 21:17:04 INFO mapreduce.Job: Job job_1620904910871_0019 completed successfully
+21/05/13 21:17:04 INFO mapreduce.Job: Counters: 49
+        File System Counters
+                FILE: Number of bytes read=78
+                FILE: Number of bytes written=783859                                                                                  
+                FILE: Number of read operations=0                                                                                     
+                FILE: Number of large read operations=0                                                                               
+                FILE: Number of write operations=0                                                                                    
+                HDFS: Number of bytes read=544                                                                                        
+                HDFS: Number of bytes written=15                                                                                      
+                HDFS: Number of read operations=15                                                                                    
+                HDFS: Number of large read operations=0                                                                               
+                HDFS: Number of write operations=2                                                                                    
+        Job Counters                                                                                                                  
+                Launched map tasks=4                                                                                                  
+                Launched reduce tasks=1                                                                                               
+                Other local map tasks=4                                                                                               
+                Total time spent by all maps in occupied slots (ms)=324759                                                            
+                Total time spent by all reduces in occupied slots (ms)=3214                                                           
+                Total time spent by all map tasks (ms)=324759                                                                         
+                Total time spent by all reduce tasks (ms)=3214                                                                        
+                Total vcore-milliseconds taken by all map tasks=324759                                                                
+                Total vcore-milliseconds taken by all reduce tasks=3214                                                               
+                Total megabyte-milliseconds taken by all map tasks=81189750                                                           
+                Total megabyte-milliseconds taken by all reduce tasks=803500                                                          
+        Map-Reduce Framework                                                                                                          
+                Map input records=0                                                                                                   
+                Map output records=4                                                                                                  
+                Map output bytes=64                                                                                                   
+                Map output materialized bytes=96                                                                                      
+                Input split bytes=544                                                                                                 
+                Combine input records=0                                                                                               
+                Combine output records=0                                                                                              
+                Reduce input groups=1                                                                                                 
+                Reduce shuffle bytes=96                                                                                               
+                Reduce input records=4                                                                                                
+                Reduce output records=1                                                                                               
+                Spilled Records=8                                                                                                     
+                Shuffled Maps =4                                                                                                      
+                Failed Shuffles=0                                                                                                     
+                Merged Map outputs=4                                                                                                  
+                GC time elapsed (ms)=1605                                                                                             
+                CPU time spent (ms)=20550                                                                                             
+                Physical memory (bytes) snapshot=931393536                                                                            
+                Virtual memory (bytes) snapshot=9705791488                                                                            
+                Total committed heap usage (bytes)=510132224                                                                          
+        Shuffle Errors                                                                                                                
+                BAD_ID=0                                                                                                              
+                CONNECTION=0                                                                                                          
+                IO_ERROR=0                                                                                                            
+                WRONG_LENGTH=0                                                                                                        
+                WRONG_MAP=0                                                                                                           
+                WRONG_REDUCE=0                                                                                                        
+        File Input Format Counters                                                                                                    
+                Bytes Read=0                                                                                                          
+        File Output Format Counters                                                                                                   
+                Bytes Written=15                                                                                                      
+21/05/13 21:17:04 INFO streaming.StreamJob: Output directory: /user/maria_dev/assign1/q02/final_output                                
+[maria_dev@sandbox-hdp q02]$ hdfs dfs -cat assign1/q02/final_output/part-00000                                                        
+3.14159265359

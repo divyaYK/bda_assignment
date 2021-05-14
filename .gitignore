@@ -132,7 +132,3 @@ dmypy.json
 .vscode
 
 blah.txt
-
-assignment_1/submission/*
-assignment_1/submission/q*
-assignment_1/submission

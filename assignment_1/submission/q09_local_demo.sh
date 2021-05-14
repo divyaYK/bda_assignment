@@ -1,0 +1,1 @@
+python mapper.py 1000000 | sort -n | python reducer.py
