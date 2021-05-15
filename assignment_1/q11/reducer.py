@@ -10,7 +10,6 @@ def MaxMinRepeating(arr, n):
     max_number = max(arr)
     arr.append(max_number + 1) # "dummy" one added to save the max number in case it occurs only once
     arr = sorted(arr)
-    print(arr)
     result_max = []
     result_min = []
     count = 1
