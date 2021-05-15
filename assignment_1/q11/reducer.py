@@ -22,10 +22,6 @@ for line in sys.stdin:
 max_occurrences = max(number_n_occurrences.values())
 min_occurrences = min(number_n_occurrences.values())
 
-print("max occurrences: ", max_occurrences)
-print("min occurrences: ", min_occurrences)
-print("dict: ", number_n_occurrences)
-
 for key, value in number_n_occurrences.items():
     if value == max_occurrences:
         print("Max occurred: ", key, value)
