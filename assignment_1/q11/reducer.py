@@ -29,13 +29,8 @@ print("dict: ", number_n_occurrences)
 for key, value in number_n_occurrences.items():
     if value == max_occurrences:
         print("Max occurred: ", key, value)
+
+for key, value in number_n_occurrences.items():
     if value == min_occurrences:
         print("Min occurred: ", key, value)
 
-# print("Maximum numbers and their number of occurrences")
-# for number in max_list:
-#     print(number, max_occurrences)
-
-# print("Minimum numbers and their number of occurrences")
-# for number in min_list:
-#     print(number, min_occurrences)
